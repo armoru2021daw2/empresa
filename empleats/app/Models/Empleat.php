@@ -9,8 +9,16 @@ class Empleat extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'id',
+        'nif',
         'nom',
+        'cognom',
+        'adreça',
+        'poblacio',
+        'comarca',
+        'telfix',
+        'telf',
         'email',
-        'telefon'
+        'dataingres'
     ];
 }

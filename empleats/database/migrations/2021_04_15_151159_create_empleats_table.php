@@ -15,9 +15,16 @@ class CreateEmpleatsTable extends Migration
     {
         Schema::create('empleats', function (Blueprint $table) {
             $table->id();
+            $table->string('nif');
             $table->string('nom');
+            $table->string('cognoms');
+            $table->string('adreça');
+            $table->string('poblacio');
+            $table->string('comarca');
+            $table->string('telfix');
+            $table->string('telf');
             $table->string('email');
-            $table->string('telefon');
+            $table->string('dataingres');
             $table->timestamps();
         });
     }

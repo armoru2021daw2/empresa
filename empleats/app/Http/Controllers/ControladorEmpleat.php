@@ -15,7 +15,7 @@ class ControladorEmpleat extends Controller
     public function index()
     {
         $empleat = Empleat::all();
-        return view ('index', compact('empleat'));
+        return view('index', compact('empleat'));
     }
 
     /**
@@ -27,6 +27,24 @@ class ControladorEmpleat extends Controller
     {
         return view('welcome');
     }
+    public function store(Request $request)
+    {
+        $nouEmpleat = $request->validate([
+            'nif' => 'required|max:255',
+            'nom' => 'required|max:255',
+            'cognoms' => 'required|max:255',
+            'adreça' => 'required|max:255',
+            'poblacio' => 'required|max:255',
+            'comarca' => 'required|max:255',
+            'telfix' => 'required|max:255',
+            'telf' => 'required|max:255',
+            'email' => 'required|max:255',
+            'dataingres' => 'required|max:255',
+            ]);
+            $empleat = Empleat::create($nouEmpleat);
+
+            return redirect('/empleats')->with('completed', 'Empleat creat!');
+        }
 
     /**
      * Store a newly created resource in storage.
@@ -34,17 +52,7 @@ class ControladorEmpleat extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        $nouEmpleat = $request->validate([
-            'nom' => 'required|max:255',
-            'email' => 'required|max:255',
-            'telefon' => 'required|max:255',
-        ]);
-        $empleat = Empleat::create($nouEmpleat);
 
-        return redirect('/empleats')->with('completed','Empleat creat!');
-    }
 
     /**
      * Display the specified resource.
@@ -66,19 +74,26 @@ class ControladorEmpleat extends Controller
     public function edit($id)
     {
         $empleat = Empleat::findOrFail($id);
-        return view ('actualitza', compact('empleat'));
+        return view('actualitza', compact('empleat'));
     }
-    public function update (Request $request, $id)
+    public function update(Request $request, $id)
     {
         $dades = $request->validate([
+            'nif' => 'required|max:255',
             'nom' => 'required|max:255',
+            'cognoms' => 'required|max:255',
+            'adreça' => 'required|max:255',
+            'poblacio' => 'required|max:255',
+            'comarca' => 'required|max:255',
+            'telfix' => 'required|max:255',
+            'telf' => 'required|max:255',
             'email' => 'required|max:255',
-            'telefon' => 'required|max:255',
-        ]);
-        Empleat::whereId($id)->update($dades);
-        return redirect('/empleats')->with('completed', 'Empleat actualitzat');
-
+            'dataingres' => 'required|max:255',
+            ]);
+            Empleat::whereId($id)->update($dades);
+            return redirect('/empleats')->with('completed', 'Empleat actualitzat');
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -96,8 +111,9 @@ class ControladorEmpleat extends Controller
      */
     public function destroy($id)
     {
-        $empleat = Empleat::findOrFail($id);
-        return view('index', compact('empleat'));
+        $empleat = empleat::findOrFail($id);
+        $empleat->delete();
 
-    }
+        return redirect('/empleats')->with('completed', 'Empleat esborrat');    }
 }
+

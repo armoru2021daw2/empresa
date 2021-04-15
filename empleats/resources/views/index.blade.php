@@ -13,19 +13,32 @@
     <thead>
         <tr class="table-primary">
           <td># ID</td>
+          <td>Nif</td>
           <td>Nom</td>
-          <td>Email</td>
+          <td>Cognom</td>
+          <td>Adreça</td>
+          <td>Població</td>
+          <td>Comarca</td>
+          <td>Telèfon Fix</td>
           <td>Telèfon</td>
-          <td>Action</td>
+          <td>Email</td>
+          <td>Data Ingres</td>
         </tr>
     </thead>
     <tbody>
         @foreach($empleat as $empl)
         <tr>
             <td>{{$empl->id}}</td>
+            <td>{{$empl->nif}}</td>
             <td>{{$empl->nom}}</td>
-            <td>{{$empl->email}}</td>
+            <td>{{$empl->cognom}}</td>
+            <td>{{$empl->adreça}}</td>
+            <td>{{$empl->poblacio}}</td>
+            <td>{{$empl->comarca}}</td>
+            <td>{{$empl->telfix}}</td>
             <td>{{$empl->telefon}}</td>
+            <td>{{$empl->email}}</td>
+            <td>{{$empl->dataingres}}</td>
             <td class="text-left">
                 <a href="{{ route('empleats.edit', $empl->id)}}" class="btn btn-success btn-sm">Edita</a>
                 <form action="{{ route('empleats.destroy', $empl->id)}}" method="post" style="display: inline-block">
