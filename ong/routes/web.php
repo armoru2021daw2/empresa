@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('ongs', ControladorOng::class);
+Route::resource('ong', ControladorOng::class);

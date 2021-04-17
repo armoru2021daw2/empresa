@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Llista d'empleats</h1>
+<h1>Llista d'Ongs</h1>
 <div class="mt-5">
   @if(session()->get('success'))
     <div class="alert alert-success">
@@ -13,22 +13,32 @@
     <thead>
         <tr class="table-primary">
           <td># ID</td>
+          <td>Cif</td>
           <td>Nom</td>
-          <td>Email</td>
-          <td>Telèfon</td>
+          <td>Adreça</td>
+          <td>Poblacio</td>
+          <td>Comarca</td>
+          <td>Tipus ONG</td>
+          <td>Declaració</td>
           <td>Action</td>
+         
+            
         </tr>
     </thead>
     <tbody>
-        @foreach($empleat as $empl)
+        @foreach($ong as $ong)
         <tr>
-            <td>{{$empl->id}}</td>
-            <td>{{$empl->nom}}</td>
-            <td>{{$empl->email}}</td>
-            <td>{{$empl->telefon}}</td>
+            <td>{{$ong->id}}</td>
+            <td>{{$ong->cif}}</td>
+            <td>{{$ong->nom}}</td>
+            <td>{{$ong->adreça}}</td>
+            <td>{{$ong->poblacio}}</td>
+            <td>{{$ong->comarca}}</td>
+            <td>{{$ong->tipusong}}</td>
+            <td>{{$ong->declaracio}}</td>
             <td class="text-left">
-                <a href="{{ route('empleats.edit', $empl->id)}}" class="btn btn-success btn-sm">Edita</a>
-                <form action="{{ route('empleats.destroy', $empl->id)}}" method="post" style="display: inline-block">
+                <a href="{{ route('ong.edit', $ong->id)}}" class="btn btn-success btn-sm">Edita</a>
+                <form action="{{ route('ong.destroy', $ong->id)}}" method="post" style="display: inline-block">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger btn-sm" type="submit">Esborra</button>
@@ -39,5 +49,5 @@
     </tbody>
   </table>
 <div>
-<br><a href="{{ url('empleats/create') }}">Accés directe a la vista de creació d'empleats</a>
+<br><a href="{{ url('ong/create') }}">Accés directe a la vista de creació d'ongs</a>
 @endsection

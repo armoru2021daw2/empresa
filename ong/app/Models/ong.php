@@ -15,6 +15,6 @@ class ong extends Model
         'poblacio',
         'comarca',
         'tipusong',
-        'declaracio',
+        'declaracio'
     ];
 }

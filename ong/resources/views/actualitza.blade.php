@@ -18,25 +18,41 @@
             </ul>
         </div>
         @endif
-        <form method="post" action="{{ route('empleats.update', $empleat->id) }}">
+        <form method="post" action="{{ route('ong.update', $ong->id) }}">
             <div class="form-group">
                 @csrf
                 @method('PATCH')
+                <label for="cif">Cif</label>
+                <input type="text" class="form-control" name="cif" value="{{ $ong->cif }}" />
+            </div>
+            <div class="form-group">
                 <label for="nom">Nom</label>
-                <input type="text" class="form-control" name="nom" value="{{ $empleat->nom }}" />
+                <input type="text" class="form-control" name="nom" value="{{ $ong->nom }}" />
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" name="email" value="{{ $empleat->email }}" />
+                <label for="adreça">Adreça</label>
+                <input type="text" class="form-control" name="adreça" value="{{ $ong->adreça }}" />
             </div>
             <div class="form-group">
-                <label for="telefon">Telèfon</label>
-                <input type="text" class="form-control" name="telefon" value="{{ $empleat->telefon }}" />
+                <label for="poblacio">Població</label>
+                <input type="text" class="form-control" name="poblacio" value="{{ $ong->poblacio }}" />
+            </div>
+            <div class="form-group">
+                <label for="comarca">Comarca</label>
+                <input type="text" class="form-control" name="comarca" value="{{ $ong->comarca }}" />
+            </div>
+            <div class="form-group">
+                <label for="tipusong">Tipus ONG</label>
+                <input type="text" class="form-control" name="tipusong" value="{{ $ong->tipusong }}" />
+            </div>
+            <div class="form-group">
+                <label for="declaracio">Declaració</label>
+                <input type="text" class="form-control" name="declaracio" value="{{ $ong->declaracio }}" />
             </div>
 
             <button type="submit" class="btn btn-block btn-danger">Actualitza</button>
         </form>
     </div>
 </div>
-<br><a href="{{ url('empleats') }}">Accés directe a la Llista d'empleats</a
+<br><a href="{{ url('ong') }}">Accés directe a la Llista d'ongs</a
 @endsection

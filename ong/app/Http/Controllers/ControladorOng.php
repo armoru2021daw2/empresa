@@ -29,7 +29,7 @@ class ControladorOng extends Controller
     }
     public function store(Request $request)
     {
-        $nouEmpleat = $request->validate([
+        $nouOng = $request->validate([
             'cif' => 'required|max:255',
             'nom' => 'required|max:255',
             'adreça' => 'required|max:255',
@@ -39,7 +39,7 @@ class ControladorOng extends Controller
             'declaracio' => 'required|max:255',
             ]);
             $ong = ong::create($nouOng);
-            return redirect('/ongs')->with('completed', 'Ong creada!');
+            return redirect('/ong')->with('completed', 'Ong creada!');
         }
 
     /**
@@ -83,7 +83,7 @@ class ControladorOng extends Controller
                 'declaracio' => 'required|max:255',  
                         ]);  
             ong::whereId($id)->update($dades); 
-            return redirect('/ongs')->with('completed', 'Ong actualitzada');
+            return redirect('/ong')->with('completed', 'Ong actualitzada');
         }
     /**
      * Update the specified resource in storage.
@@ -104,6 +104,6 @@ class ControladorOng extends Controller
         $ong = ong::findOrFail($id);
         $ong->delete();
 
-        return redirect('/ongs')->with('completed', 'Ong esborrada');    }
+        return redirect('/ong')->with('completed', 'Ong esborrada');    }
 }
 

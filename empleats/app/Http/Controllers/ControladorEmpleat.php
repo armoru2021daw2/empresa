@@ -42,7 +42,6 @@ class ControladorEmpleat extends Controller
             'dataingres' => 'required|max:255',
             ]);
             $empleat = Empleat::create($nouEmpleat);
-
             return redirect('/empleats')->with('completed', 'Empleat creat!');
         }
 

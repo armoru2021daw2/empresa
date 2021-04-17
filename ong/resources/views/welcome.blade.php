@@ -2,10 +2,10 @@
 
 @section('content')
 
-<h1>Aplicació d'administració d'empleats</h1>
+<h1>Aplicació d'administració d'ong</h1>
 <div class="card mt-5">
   <div class="card-header">
-    Afegeix un nou empleat
+    Afegeix una nova ong
   </div>
 
   <div class="card-body">
@@ -18,23 +18,39 @@
         </ul>
       </div>
     @endif
-      <form method="post" action="{{ route('empleats.store') }}">
-          <div class="form-group">
-              @csrf
-              <label for="nom">Nom</label>
-              <input type="text" class="form-control" name="nom"/>
-          </div>
-          <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="email"/>
-          </div>
-          <div class="form-group">
-              <label for="telefon">Telèfon</label>
-              <input type="tel" class="form-control" name="telefon"/>
-          </div>
+      <form method="post" action="{{ route('ong.store') }}">
+      <div class="form-group">
+                @csrf
+                <label for="cif">Cif</label>
+                <input type="text" class="form-control" name="cif"/>
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" name="nom"/>
+            </div>
+            <div class="form-group">
+                <label for="adreça">Adreça</label>
+                <input type="text" class="form-control" name="adreça"/>
+            </div>
+            <div class="form-group">
+                <label for="poblacio">Població</label>
+                <input type="text" class="form-control" name="poblacio"/>
+            </div>
+            <div class="form-group">
+                <label for="comarca">Comarca</label>
+                <input type="text" class="form-control" name="comarca"/>
+            </div>
+            <div class="form-group">
+                <label for="tipusong">Tipus ONG</label>
+                <input type="text" class="form-control" name="tipusong"/>
+            </div>
+            <div class="form-group">
+                <label for="declaracio">Declaració</label>
+                <input type="text" class="form-control" name="declaracio"/>
+            </div>
           <button type="submit" class="btn btn-block btn-primary">Envia</button>
       </form>
   </div>
 </div>
-<br><a href="{{ url('empleats') }}">Accés directe a la Llista d'empleats</a>
+<br><a href="{{ url('ong') }}">Accés directe a la Llista d'ongs</a>
 @endsection
