@@ -59,7 +59,7 @@
             </div>
             <div class="form-group">
                 <label for="telfix">Data Ingres</label>
-                <input type="text" class="form-control" name="dataingres" value="{{ $empleat->dataingres }}" />
+                <input type="text" class="form-control" name="dataingres" value="{{ $empleat ?? ''->dataingres }}" />
             </div>
           <button type="submit" class="btn btn-block btn-primary">Envia</button>
       </form>
