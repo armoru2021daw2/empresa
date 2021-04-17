@@ -12,7 +12,7 @@ class Empleat extends Model
         'id',
         'nif',
         'nom',
-        'cognom',
+        'cognoms',
         'adreça',
         'poblacio',
         'comarca',

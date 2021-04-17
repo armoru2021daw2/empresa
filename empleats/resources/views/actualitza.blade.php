@@ -47,18 +47,18 @@
             </div>
             <div class="form-group">
                 <label for="telfix">Telèfon Fix</label>
-                <input type="text" class="form-control" name="telefix" value="{{ $empleat->telefix }}" />
+                <input type="text" class="form-control" name="telfix" value="{{ $empleat->telfix }}" />
             </div>
             <div class="form-group">
-                <label for="telefon">Telèfon</label>
-                <input type="text" class="form-control" name="telefon" value="{{ $empleat->telefon }}" />
+                <label for="telf">Telèfon</label>
+                <input type="text" class="form-control" name="telf" value="{{ $empleat->telf }}" />
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" class="form-control" name="email" value="{{ $empleat->email }}" />
             </div>
             <div class="form-group">
-                <label for="telfix">Data Ingres</label>
+                <label for="dataingres">Data Ingres</label>
                 <input type="text" class="form-control" name="dataingres" value="{{ $empleat->dataingres }}" />
             </div>
 

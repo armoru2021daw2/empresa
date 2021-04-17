@@ -21,45 +21,45 @@
       <form method="post" action="{{ route('empleats.store') }}">
       <div class="form-group">
                 @csrf
-                @method('PATCH')
+
                 <label for="nif">Nif</label>
-                <input type="text" class="form-control" name="nif" value="{{ $empleat->nif }}" />
+                <input type="text" class="form-control" name="nif"/>
             </div>
             <div class="form-group">
                 <label for="nom">Nom</label>
-                <input type="text" class="form-control" name="nom" value="{{ $empleat->nom }}" />
+                <input type="text" class="form-control" name="nom"/>
             </div>
             <div class="form-group">
                 <label for="cognoms">Cognoms</label>
-                <input type="text" class="form-control" name="cognoms" value="{{ $empleat->cognoms }}" />
+                <input type="text" class="form-control" name="cognoms"/>
             </div>
             <div class="form-group">
                 <label for="adreça">Adreça</label>
-                <input type="text" class="form-control" name="adreça" value="{{ $empleat->adreça }}" />
+                <input type="text" class="form-control" name="adreça"/>
             </div>
             <div class="form-group">
                 <label for="poblacio">Poblacio</label>
-                <input type="text" class="form-control" name="poblacio" value="{{ $empleat->poblacio }}" />
+                <input type="text" class="form-control" name="poblacio"/>
             </div>
             <div class="form-group">
                 <label for="comarca">Comarca</label>
-                <input type="text" class="form-control" name="comarca" value="{{ $empleat->comarca }}" />
+                <input type="text" class="form-control" name="comarca"/>
             </div>
             <div class="form-group">
                 <label for="telfix">Telèfon Fix</label>
-                <input type="text" class="form-control" name="telefix" value="{{ $empleat->telefix }}" />
+                <input type="text" class="form-control" name="telfix"/>
             </div>
             <div class="form-group">
-                <label for="telefon">Telèfon</label>
-                <input type="text" class="form-control" name="telefon" value="{{ $empleat->telefon }}" />
+                <label for="telf">Telèfon</label>
+                <input type="text" class="form-control" name="telf"/>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" name="email" value="{{ $empleat->email }}" />
+                <input type="text" class="form-control" name="email"/>
             </div>
             <div class="form-group">
-                <label for="telfix">Data Ingres</label>
-                <input type="text" class="form-control" name="dataingres" value="{{ $empleat ?? ''->dataingres }}" />
+                <label for="dataingres">Data Ingres</label>
+                <input type="text" class="form-control" name="dataingres"/>
             </div>
           <button type="submit" class="btn btn-block btn-primary">Envia</button>
       </form>

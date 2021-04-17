@@ -15,7 +15,7 @@
           <td># ID</td>
           <td>Nif</td>
           <td>Nom</td>
-          <td>Cognom</td>
+          <td>Cognoms</td>
           <td>Adreça</td>
           <td>Població</td>
           <td>Comarca</td>
@@ -31,12 +31,12 @@
             <td>{{$empl->id}}</td>
             <td>{{$empl->nif}}</td>
             <td>{{$empl->nom}}</td>
-            <td>{{$empl->cognom}}</td>
+            <td>{{$empl->cognoms}}</td>
             <td>{{$empl->adreça}}</td>
             <td>{{$empl->poblacio}}</td>
             <td>{{$empl->comarca}}</td>
             <td>{{$empl->telfix}}</td>
-            <td>{{$empl->telefon}}</td>
+            <td>{{$empl->telf}}</td>
             <td>{{$empl->email}}</td>
             <td>{{$empl->dataingres}}</td>
             <td class="text-left">
