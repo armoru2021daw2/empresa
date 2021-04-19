@@ -58,15 +58,15 @@
                 <input type="text" class="form-control" name="email"/>
             </div>
             <div class="form-group">
-                <label for="datalta">Data Alta/label>
+                <label for="datalta">Data Alta</label>
                 <input type="text" class="form-control" name="datalta"/>
             </div>
             <div class="form-group">
-                <label for="quota">Quota/label>
+                <label for="quota">Quota</label>
                 <input type="text" class="form-control" name="quota"/>
             </div>
             <div class="form-group">
-                <label for="aportacio">Aportació/label>
+                <label for="aportacio">Aportació</label>
                 <input type="text" class="form-control" name="aportacio"/>
             </div>
           <button type="submit" class="btn btn-block btn-primary">Envia</button>

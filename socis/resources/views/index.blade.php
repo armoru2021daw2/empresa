@@ -30,19 +30,19 @@
     <tbody>
         @foreach($soci as $soc)
         <tr>
-            <td>{{$empl->id}}</td>
-            <td>{{$empl->nif}}</td>
-            <td>{{$empl->nom}}</td>
-            <td>{{$empl->cognoms}}</td>
-            <td>{{$empl->adreça}}</td>
-            <td>{{$empl->poblacio}}</td>
-            <td>{{$empl->comarca}}</td>
-            <td>{{$empl->telfix}}</td>
-            <td>{{$empl->telf}}</td>
-            <td>{{$empl->email}}</td>
-            <td>{{$empl->datalta}}</td>
-            <td>{{$empl->quota}}</td>
-            <td>{{$empl->aportacio}}</td>
+            <td>{{$soc->id}}</td>
+            <td>{{$soc->nif}}</td>
+            <td>{{$soc->nom}}</td>
+            <td>{{$soc->cognoms}}</td>
+            <td>{{$soc->adreça}}</td>
+            <td>{{$soc->poblacio}}</td>
+            <td>{{$soc->comarca}}</td>
+            <td>{{$soc->telfix}}</td>
+            <td>{{$soc->telf}}</td>
+            <td>{{$soc->email}}</td>
+            <td>{{$soc->datalta}}</td>
+            <td>{{$soc->quota}}</td>
+            <td>{{$soc->aportacio}}</td>
             <td class="text-left">
                 <a href="{{ route('socis.edit', $soc->id)}}" class="btn btn-success btn-sm">Edita</a>
                 <form action="{{ route('socis.destroy', $soc->id)}}" method="post" style="display: inline-block">

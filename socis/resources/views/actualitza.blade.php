@@ -62,7 +62,7 @@
                 <input type="text" class="form-control" name="datalta" value="{{ $soci->datalta }}" />
             </div>
             <div class="form-group">
-                <label for="quota">Quota/label>
+                <label for="quota">Quota</label>
                 <input type="text" class="form-control" name="quota" value="{{ $soci->quota }}" />
             </div>
             <div class="form-group">
